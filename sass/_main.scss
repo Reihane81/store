@@ -1,0 +1,61 @@
+//// header ////
+
+@media (max-width:800px) {
+    .header {
+        & .nav-item {
+            display: none !important;
+        }
+
+        & .menu,
+          .menu-list {
+            display: block !important;
+        }
+
+        & .name-compny {
+            margin-left: 0rem !important;
+            left: 7rem !important;
+            position: absolute !important;
+        }
+    }
+}
+
+
+///// body /////
+
+@media (max-width:441px) {
+    .text-titel {
+        & h1 {
+            font-size: 30px !important;
+        }
+    }
+}
+
+@media (max-width:384px) {
+    .video-prdct {
+        display: none !important;
+    }
+}
+
+@media (max-width:972px) {
+    .section-header {
+        left: 0% !important;
+        right: 0% !important;
+    }
+
+    .img-prdct {
+        padding: 0 !important;
+        bottom: 0 !important;
+    }
+
+    .video-prdct {
+        right: 0rem !important;
+    }
+}
+
+@media (max-width:314px) {
+    .text-titel {
+        & h1 {
+            font-size: 28px !important;
+        }
+    }
+}

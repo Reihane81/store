@@ -1,0 +1,214 @@
+
+/////color/////
+
+$shadow_color : rgba(5, 5, 5, 0.5);
+$light-shadow : rgba(0, 0, 0, 0.2);
+$red : rgb(196, 35, 35);
+$white : #ffffff;
+$black : rgb(14, 15, 20);
+$bgcolor : #dad8d8;
+$red : rgb(139, 15, 15);
+$secondery_bgcolor : #151921;
+$gray-light : rgb(46, 45, 45);
+$gray-show : rgb(58, 57, 57);
+
+
+/////////////////////////////////
+////// mixin
+/////////////////////////////////
+
+
+@mixin transition($hover-value) {
+    transition: $hover-value;
+    -moz-transition: $hover-value;
+    -o-transition: $hover-value;
+    -webkit-transition: $hover-value;
+    -moz-transition: $hover-value;
+}
+
+
+@mixin rotateZ($rotate-value) {
+    transform: rotateZ($rotate-value) !important;
+    -webkit-transform: rotateZ($rotate-value) !important;
+    -moz-transform: rotateZ($rotate-value) !important;
+    -o-transform: rotateZ($rotate-value) !important;
+    -ms-transform: rotateZ($rotate-value) !important;
+}
+
+
+@mixin translateX($translate-value) {
+    transform: translate($translate-value) !important;
+    -webkit-transform: translate($translate-value) !important;
+    -moz-transform: translate($translate-value) !important;
+    -o-transform: translate($translate-value) !important;
+}
+
+@mixin translateY($translate-value) {
+    transform: translateY($translate-value) !important;
+    -webkit-transform: translateY($translate-value) !important;
+    -moz-transform: translateY($translate-value) !important;
+    -o-transform: translateY($translate-value) !important;
+    -ms-transform: translateY($translate-value) !important;
+}
+
+@mixin Translate($translateX-value, $translateY-value) {
+    transform: translate($translateX-value, $translateY-value) !important;
+    -webkit-transform: translate($translateX-value, $translateY-value) !important;
+    -moz-transform: translate($translateX-value, $translateY-value) !important;
+    -o-transform: translate($translateX-value, $translateY-value) !important;
+    -ms-transform: translate($translateX-value, $translateY-value) !important;
+}
+
+@mixin animation {
+    -webkit-animation-name: fade;
+    animation-name: fade;
+  }
+
+@mixin shadow-box {
+    box-shadow: -0px 2px 10px $shadow_color;
+}
+
+@mixin shadow-box-scattered {
+    box-shadow: 0px 0px 19px -15px $shadow_color;
+}
+
+@mixin light-shadow-box {
+    box-shadow: -0px 2px 5px $shadow_color;
+}
+
+@mixin animation-circle {
+    border-top-color: rgba(0,0,0,0.6);
+	border-bottom-color: rgba(0,0,0,0.15);
+	border-left-color: rgba(0,0,0,0.65);
+	border-right-color: rgba(0,0,0,0.15);
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+
+///////////////////////////////
+//////
+///////////////////////////////
+
+
+%fullspace {
+    height: 100%;
+    width: 100%;
+}
+
+
+/////////////// slider /////////////
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+
+///////////////////////////////
+////// fonts
+///////////////////////////////
+
+
+@font-face {
+    font-family: Sahel;
+    src: url(../fonts/Sahel-Bold.eot) format("eot");
+    src: url(../fonts/Sahel.ttf) format("ttf");
+    src: url(../fonts/Sahel.woff) format("woff");
+    font-weight: normal;
+}
+
+
+
+
+///////////////////////////
+///// class
+///////////////////////////
+
+.db-flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.db-flex-res {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.small {
+    opacity: 0.8;
+    font-size: 60%;
+}
+
+.op-75 {
+    opacity: .75 !important;
+}
+.op-5 {
+    opacity: .5 !important;
+}
+
+.op-1 {
+    opacity: 1 !important;
+}
+.op-2{
+    opacity: .2 !important;
+}
+.fw-300{
+    font-weight: 400;
+}
+
+.btn-primery {
+    padding: .05rem 1rem;
+    color: $white;
+    border-radius: .5rem;
+
+    & span {
+        opacity: 1 !important;
+    }
+}
+.mg-1 {
+    margin:.5rem 2rem;
+}
+
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+@keyframes circle {
+    from {transform: rotate(0deg);}
+    to   {transform: rotate(360deg);}
+}
